@@ -24,9 +24,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var dockViewHeightConstraint: NSLayoutConstraint!
     
     
-    
-    
-    
     @IBOutlet weak var counterLable: UILabel!
     var messageArray:[String] = [String]()
     
@@ -65,8 +62,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    
-    
     func displayLocationInfo(placemark: CLPlacemark)
     {
     
@@ -79,9 +74,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         local = placemark.locality
         country = placemark.country
     
-        
-        
-        
     }
     
     
@@ -90,26 +82,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
-    /* //STIMER
-    //Timer
-    var chatTime:NSTimeInterval = 1
-    
-    var counter:Int = 10
-    
-    var counter2:Int = 0
-    */
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //Testing#############
-        
-        
-        
-        
-        
-        //Testing#############
-        
     
         
         self.locationmanager.delegate = self
@@ -136,42 +110,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         self.retriveMessages()
         
-        
-        /* //STIMER
-        //Timer Start
-        var timer = NSTimer.scheduledTimerWithTimeInterval(chatTime, target: self, selector: Selector("chatTimer"), userInfo: nil, repeats: true)
-        
-        counterLable.text = "10"
-        
-       
-        println(self.counter2)
-
-        */
-        
-          /*
-            
-            let indexPath = NSIndexPath(index: counter2)
-            messageTableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated:false)
-
-          */
     }
     
     
     @IBAction func sendButtonTapped(sender: UIButton) {
-        //Send button is tapped
-        
-        //STIMER
-        //if(counter == 0){
-            //Disable Button if timer is end
-           // messageButton.enabled = false
-
-        
-       // } else {
-        
-        //Score
-            
-     //           counter+=5
-        
         
         //utc date
 
@@ -240,8 +182,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
 
         }
-     //chatTimer ends
-     // }
     }
     
     func retriveMessages(){
@@ -260,9 +200,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         query.whereKey("utcTime", equalTo: string)
         
         
-        
-        
-        
         query.findObjectsInBackgroundWithBlock { (objects:[AnyObject]?,error:NSError?) -> Void in
             //Clear messages array
             self.messageArray = [String]()
@@ -272,9 +209,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 
                 
                 
-                //Limit posts size to 10
+                //Limit posts size to 100 within a minute
                 
-                if self.messageArray.count < 10 {
+                if self.messageArray.count < 100 {
 
                  //Retrive text column value
                 let messageText:String? = (messageObject as! PFObject)["Text"] as? String
@@ -285,9 +222,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 
                 
                 if messageText != nil {
-                    
-                    //STIMER
-                    //    self.counter2+=1
                     
                     
                     
@@ -325,25 +259,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         
     }
-    
-    //Timer method
-    //STIMER
-   
-    /*
-    func chatTimer(){
-    
-        
-    //timer logic
-        println("Tik")
-    //Diable button for now
-        if counter != 0 {
-        counter-=1
-        }
-        counterLable.text = String(counter)
-        
-    }
-    
-   */
     
     
     

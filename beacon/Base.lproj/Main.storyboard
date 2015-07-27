@@ -18,8 +18,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wip-AW-2mP">
-                                <rect key="frame" x="255" y="542" width="81" height="30"/>
-                                <state key="normal" title="Navigate">
+                                <rect key="frame" x="0.0" y="300" width="600" height="649"/>
+                                <state key="normal" backgroundImage="BG">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -32,7 +32,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sKm-ad-1ig" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1159" y="535"/>
+            <point key="canvasLocation" x="-1075" y="547"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -150,7 +150,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-314" y="958"/>
+            <point key="canvasLocation" x="-302" y="814"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BG" width="320" height="568"/>
+    </resources>
 </document>

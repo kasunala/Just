@@ -379,7 +379,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     }
     
-    //MARK: tableView Delegate methods
+    //MARK: tableView Delegate methods change
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //Create, modify and return the cell

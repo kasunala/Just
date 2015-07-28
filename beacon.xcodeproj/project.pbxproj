@@ -107,9 +107,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		882E171E1B6718640001D583 /* CloudLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CloudLayer;
+			sourceTree = "<group>";
+		};
 		8881992F1B24240D00FE9637 = {
 			isa = PBXGroup;
 			children = (
+				882E171E1B6718640001D583 /* CloudLayer */,
 				8881997F1B2426BC00FE9637 /* Frameworks */,
 				8881993A1B24240D00FE9637 /* beacon */,
 				888199501B24240D00FE9637 /* beaconTests */,
@@ -493,6 +501,7 @@
 				888199591B24240D00FE9637 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8881995A1B24240D00FE9637 /* Build configuration list for PBXNativeTarget "beaconTests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +510,7 @@
 				8881995C1B24240D00FE9637 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

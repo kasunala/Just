@@ -10,6 +10,7 @@ import UIKit
 import Parse
 import CoreLocation
 
+
 //Delegate and protocols need trainning
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate,UINavigationControllerDelegate, CLLocationManagerDelegate {
 
@@ -37,10 +38,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return true
     }
     
+    
     //Core location
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        
         
         CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: { (placemarks, error) -> Void in
             
@@ -129,12 +130,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //Create PFObject
         var newMessageObject:PFObject = PFObject(className: "Message")
         newMessageObject["Text"] = self.messageTextField.text
-       
+        //let d = CloudLayer()
+        //d.Insert("Text", value: self.messageTextField.text,table:"Message")
+        
         
         //Set textLocation DUMMY
-        var textLocation:PFObject = PFObject(className: "Message")
+        //var textLocation:PFObject = PFObject(className: "Message")
         newMessageObject["textLocation"] = local + ", " + country
-        
+        //d.Insert("textLocation", value: local + ", " + country,table:"Message")
         //Set UTC time GMT
         
         let time = NSDate()
@@ -143,9 +146,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         dateFormatter.timeZone = NSTimeZone(forSecondsFromGMT: 0)
         let string = dateFormatter.stringFromDate(time)
         
-        var utcTime:PFObject = PFObject(className: "Message")
+        //var utcTime:PFObject = PFObject(className: "Message")
         newMessageObject["utcTime"] = string
-        
+        //d.Insert("utcTime", value: string,table:"Message")
         
         //Local Time
         
@@ -155,9 +158,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let string1 = dateFormatter2.stringFromDate(time2)
         
         
-        var localTime:PFObject = PFObject(className: "Message")
+        //var localTime:PFObject = PFObject(className: "Message")
         newMessageObject["localTime"] = string1
+        //d.Insert("localTime", value: string1,table:"Message")
         
+        
+      
         newMessageObject.saveInBackgroundWithBlock { (success:Bool,error:NSError?) -> Void in
             if(success){
             //Message sent
@@ -171,6 +177,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             //error
               println("message failed")
             }
+
             
             //Dispatch to main thread
             dispatch_async(dispatch_get_main_queue()){
@@ -180,6 +187,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.messageTextField.text = ""
             
             }
+
 
         }
     }

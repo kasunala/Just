@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		882E17201B67B8090001D583 /* CloudLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882E171F1B67B8090001D583 /* CloudLayer.swift */; };
 		8881993E1B24240D00FE9637 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8881993D1B24240D00FE9637 /* AppDelegate.swift */; };
 		888199401B24240D00FE9637 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8881993F1B24240D00FE9637 /* ViewController.swift */; };
 		888199431B24240D00FE9637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888199411B24240D00FE9637 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		882E171F1B67B8090001D583 /* CloudLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudLayer.swift; sourceTree = "<group>"; };
 		888199381B24240D00FE9637 /* beacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8881993C1B24240D00FE9637 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8881993D1B24240D00FE9637 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		882E171E1B6718640001D583 /* CloudLayer */ = {
 			isa = PBXGroup;
 			children = (
+				882E171F1B67B8090001D583 /* CloudLayer.swift */,
 			);
 			name = CloudLayer;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			files = (
 				888199401B24240D00FE9637 /* ViewController.swift in Sources */,
 				8881993E1B24240D00FE9637 /* AppDelegate.swift in Sources */,
+				882E17201B67B8090001D583 /* CloudLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

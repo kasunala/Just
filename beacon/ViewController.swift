@@ -129,14 +129,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         //Create PFObject
         var newMessageObject:PFObject = PFObject(className: "Message")
-        newMessageObject["Text"] = self.messageTextField.text
+        newMessageObject["text"] = self.messageTextField.text
         //let d = CloudLayer()
         //d.Insert("Text", value: self.messageTextField.text,table:"Message")
         
         
         //Set textLocation DUMMY
         //var textLocation:PFObject = PFObject(className: "Message")
-        newMessageObject["textLocation"] = local + ", " + country
+        newMessageObject["location"] = local + ", " + country
         //d.Insert("textLocation", value: local + ", " + country,table:"Message")
         //Set UTC time GMT
         

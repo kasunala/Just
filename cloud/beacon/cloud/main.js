@@ -5,7 +5,7 @@ Parse.Cloud.job("BackupMessages", function(request, status) {
 
     var nowTimeStamp = Date.now();
 
-    var timeout = 60 //* 60 * 1000; // one hour //test 1 min
+    var timeout = 60 ;//* 60 * 1000; // one hour //test 1 min
 
     var query = new Parse.Query("Calls");
 

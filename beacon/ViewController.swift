@@ -222,11 +222,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 if self.messageArray.count < 100 {
 
                  //Retrive text column value
-                let messageText:String? = (messageObject as! PFObject)["Text"] as? String
+                let messageText:String? = (messageObject as! PFObject)["text"] as? String
                  //if  not null populate message array
                 
                 //Created time stamp
-                let textLocation:String? = (messageObject as! PFObject) ["textLocation"] as? String
+                let textLocation:String? = (messageObject as! PFObject) ["location"] as? String
                 
                 
                 if messageText != nil {

@@ -28,6 +28,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var counterLable: UILabel!
     var messageArray:[String] = [String]()
     
+    
+    @IBOutlet weak var messageOl: UIView!
+    
+    
     var local:String = ""
     var country:String = ""
     
@@ -85,7 +89,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        
+        messageOl.hidden = true
         
         self.locationmanager.delegate = self
         self.locationmanager.desiredAccuracy = kCLLocationAccuracyBest
@@ -190,6 +196,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 
         }
+        
+        messageOl.hidden = true
+
     }
     
     func retriveMessages(){
@@ -325,5 +334,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
 
+
+    
+    @IBAction func newMessage(sender: AnyObject) {
+        
+        messageOl.hidden = false
+        
+    }
+    
 }
 

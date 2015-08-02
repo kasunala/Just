@@ -32,6 +32,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var messageOl: UIView!
     
     
+    @IBOutlet weak var actionTrig: UIButton!
+    
     var local:String = ""
     var country:String = ""
     
@@ -333,12 +335,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return messageArray.count
     }
 
-
-
     
     @IBAction func newMessage(sender: AnyObject) {
         
         messageOl.hidden = false
+        
+    }
+    
+    
+    @IBAction func actionTrig(sender: AnyObject) {
+        
         
     }
     
